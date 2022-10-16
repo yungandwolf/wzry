@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>王者荣耀官方网站-腾讯游戏</title>
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="/assets/css/baase.css">
+
+  <!-- 不操作DOM的js文件 -->
+
+  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+
+  <script src="./assets/js/common.js"></script>
+
+  <script src="./assets/js/request.js"></script>
+
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="cont"></div>
+
+
+  <script>
+    $('#header').load('/components/header/header.html')
+    const page = Cont.search('page') || 'home'
+    console.log(page)
+    if(page=='home'){
+      $('#cont').load(`/pages/${page}/${page}.html`)
+    }else{
+      $('#cont').load(`/pages/'DATA'/${page}/${page}.html`)
+    }
+  </script>
+</body>
+</html>
